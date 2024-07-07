@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Website </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <h1>Weather App</h1>
+
+        <div class="tab-container">
+            <p class="tab" user-dataWeather>Your Weather</p>
+            <p class="tab" search-dataWeather>Search Weather</p>
+        </div>  
+
+        <!-- Main Section  -->
+        <div class="main-content-container">
+
+            <!-- grant access UI 1 -->
+            <div class="grant-access-container">
+                <img src="./assets/location.png" alt="" width="100px">
+                <h2>Grant Location Access</h2>
+                <p>Allow access to get Weather Details</p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+            
+
+            <!-- search section UI 2-->
+            
+                <form class="form-container" action="" data-searchForm>
+                    <input type="text" data-searchInput placeholder="Search for the city..." class="search">
+                    <button>
+                        <img src="./assets/search.png" alt="" width="30px" class="search-btn">
+                    </button>
+                </form>
+            
+
+            <!-- Loading section UI 3-->
+            <div class="loading-container">
+                <img class="loading-img" src="./assets/loading.gif" alt="" width="160px">
+                <p class="loading-text">Loading</p>
+            </div>
+
+            <!-- show weather info UI -4  -->
+            <div class="weather-info-container">
+
+                <div class="name">
+                    <div data-cityName=""></div>
+                    <img src="" alt="" data-countryFlag width="30px" height="30px">
+                </div>
+
+                <div class="desc">
+                    <div class="type" data-weatherDescription></div>
+                    <img src="" alt="" data-weatherImage width="100px ">
+                    <div class="temp" data-temp ></div>
+                </div>
+                <!-- 3 Cards -->
+                <div class="weather-card">
+                    <!-- card 1 -->
+                    <div class="cards">
+                        <img src="./assets/wind.png" alt="" width="80px">
+                        <p>Wind Speed</p>
+                        <p data-windSpeed></p>
+                    </div>
+                    
+                    <!-- card 2 -->
+                    <div class="cards">
+                        <img src="./assets/humidity.png" alt="" width="80px">
+                        <p>Humidity </p>
+                        <p data-humidity></p>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class="cards">
+                        <img src="./assets/cloud.png" alt="" width="80px">
+                        <p>Clouds</p>
+                        <p data-clouds></p>
+                    </div>
+                </div>
+
+                <div class="api-error-container">
+                    <img src="./assets/not-found.png" data-notFoundImg />
+                    <p data-apiErrorText></p>
+                    <button class="btn" data-apiErrorBtn>Retry</button>
+                  </div>
+
+
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>    
+</body>
+</html>
